@@ -11,7 +11,8 @@
   <style>
     @keyframes scrollTicker {
       0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
+      90% { transform: translateX(-100%); }
+      95%, 100% { transform: translateX(-100%); }
     }
     .ticker {
       white-space: nowrap;
@@ -22,7 +23,7 @@
     .ticker-text {
       display: inline-block;
       padding-left: 100%;
-      animation: scrollTicker 50s linear infinite;
+      animation: scrollTicker 57s linear infinite;
     }
     .cta-button {
       transition: transform 0.3s ease;
@@ -30,18 +31,51 @@
     .cta-button:hover {
       transform: scale(1.05);
     }
+    .floating-panel {
+      position: fixed;
+      top: 40%;
+      right: -120px;
+      width: 160px;
+      background-color: #2563eb;
+      color: white;
+      font-weight: 600;
+      padding: 10px 15px;
+      border-radius: 8px 0 0 8px;
+      transition: right 0.3s ease;
+      z-index: 50;
+    }
+    .floating-panel:hover {
+      right: 0;
+    }
   </style>
 </head>
 <body class="bg-white text-gray-800 font-sans">
 
-  <!-- Header -->
-  <header class="flex items-center justify-between px-4 py-3 bg-white shadow-md">
-    <div class="flex items-center space-x-2">
-      <img src="toppersguideLogo.png" alt="ToppersGuide Logo" class="w-10 h-10" />
-      <span class="text-xl font-bold text-blue-600">ToppersGuide</span>
-    </div><br>
-    <span class="text-sm text-gray-500 hidden md:block">Path of Your Success</span>
+  <!-- Sticky Header with Navigation -->
+  <header class="sticky top-0 z-40 bg-white shadow-md">
+    <div class="flex items-center justify-between px-4 py-3">
+      <div class="flex items-center space-x-2">
+        <img src="toppersguideLogo.png" alt="ToppersGuide Logo" class="w-10 h-10" />
+        <span class="text-xl font-bold text-blue-600">ToppersGuide</span>
+      </div>
+      <nav class="hidden md:flex space-x-6 text-sm font-medium text-gray-700">
+        <a href="#" class="hover:text-blue-600">Home</a>
+        <a href="#" class="hover:text-blue-600">Current Affairs</a>
+        <a href="#" class="hover:text-blue-600">Mock Tests</a>
+        <a href="#" class="hover:text-blue-600">Quizzes</a>
+        <a href="#" class="hover:text-blue-600">Study Materials</a>
+        <a href="#" class="hover:text-blue-600">Job Alerts</a>
+        <a href="#contact" class="hover:text-blue-600">Contact Us</a>
+      </nav>
+    </div>
   </header>
+
+  <!-- Scrolling Ticker for Current Affairs -->
+  <div class="ticker w-full py-2 z-30">
+    <div class="ticker-text text-blue-800 font-semibold text-sm">
+      🔔 6th Aug 2025: RBI Grade B Mains Exam Scheduled | UPSC Prelims 2025 Results Declared | SSC CGL 2025 Tier I Admit Card Out | India signs MoU with France on Solar Mission | National Space Policy 2025 Announced
+    </div>
+  </div>
 
   <!-- Hero Section -->
   <section class="text-center py-10 bg-blue-50">
@@ -78,11 +112,22 @@
     </div>
   </section>
 
-  <!-- Floating Scrolling Ticker for Current Affairs -->
-  <div class="ticker fixed bottom-0 left-0 w-full py-2 z-100">
-    <div class="ticker-text text-blue-800 font-semibold text-sm">
-      🔔 6th Aug 2025: RBI Grade B Mains Exam Scheduled | UPSC Prelims 2025 Results Declared | SSC CGL 2025 Tier I Admit Card Out | India signs MoU with France on Solar Mission | National Space Policy 2025 Announced
+  <!-- Contact Us Section -->
+  <section id="contact" class="bg-gray-100 py-10 px-6">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-2xl font-bold text-center mb-4 text-gray-800">Contact Us</h2>
+      <form class="bg-white shadow-md rounded-2xl p-6 space-y-4">
+        <input type="text" placeholder="Your Name" class="w-full px-4 py-2 border rounded-md" required>
+        <input type="email" placeholder="Your Email" class="w-full px-4 py-2 border rounded-md" required>
+        <textarea rows="4" placeholder="Your Message" class="w-full px-4 py-2 border rounded-md" required></textarea>
+        <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700">Send Message</button>
+      </form>
     </div>
+  </section>
+
+  <!-- Floating Right Hidden Panel -->
+  <div class="floating-panel">
+    <a href="#" class="block text-white text-center">🎯 Take a Free Test</a>
   </div>
 
 </body>
