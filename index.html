@@ -1,265 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restrict Copy Data Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-			background: 7FFFD4; /* cream background */
-			color: #333;
-			
-			-webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-        }
-        /* Disable text selection */
-        * {
-            user-select: none;
-        }
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-  text-align: center;
-}
-    
-        /* Styling for the page */
-    
-		
-		.section {
-   /*   display: none; /* Hide all sections by default */
-            margin-bottom: 40px;
-            padding: 20px;
-            background-color: 7FFFD4;
-            border-radius: 8px;
-             margin: 50px;
-           
-            border: 1px solid #ccc;
-        }
-        h2 {
-            color: #333;
-        }
-        /* Show the section only when its ID matches the anchor in the URL */
-        :target {
-            display: block; /* Show the section when it's targeted */
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ToppersGuide.com - Path of Your Success. Get daily current affairs, mock tests, study materials, quizzes, and job alerts for SSC, UPSC, Banking, NEET, CUET, and more." />
+  <meta name="keywords" content="ToppersGuide, SSC, UPSC, Banking, NEET, CUET, Mock Tests, Quizzes, Study Materials, Current Affairs, Job Alerts" />
+  <meta name="author" content="ToppersGuide Team" />
+  <title>ToppersGuide.com | Path of Your Success</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    @keyframes scrollTicker {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    .ticker {
+      white-space: nowrap;
+      overflow: hidden;
+      position: relative;
+      background-color: #e0f7fa;
+    }
+    .ticker-text {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scrollTicker 50s linear infinite;
+    }
+    .cta-button {
+      transition: transform 0.3s ease;
+    }
+    .cta-button:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
-<body>
-<!--This is a page of secured text which we cannot copy or select using mouse or shift button in the keyboard -->
+<body class="bg-white text-gray-800 font-sans">
 
-  <!--  <h1>Hello World</h1>
-    <p>This content is restricted from copying, right-clicking, and text selection.</p>
+  <!-- Header -->
+  <header class="flex items-center justify-between px-4 py-3 bg-white shadow-md">
+    <div class="flex items-center space-x-2">
+      <img src="toppersguideLogo.png" alt="ToppersGuide Logo" class="w-10 h-10" />
+      <span class="text-xl font-bold text-blue-600">ToppersGuide</span>
+    </div><br>
+    <span class="text-sm text-gray-500 hidden md:block">Path of Your Success</span>
+  </header>
 
-<!-- This is the demo of the CA page loading with calender -->
+  <!-- Hero Section -->
+  <section class="text-center py-10 bg-blue-50">
+    <h1 class="text-3xl md:text-4xl font-bold text-gray-800">Prepare Smarter, Rank Higher!</h1>
+    <p class="text-gray-600 mt-2 text-lg">Everything you need for SSC, UPSC, Banking, NEET, CUET and more.</p>
+    <div class="mt-6 flex flex-wrap justify-center gap-4">
+      <a href="#" class="cta-button px-6 py-3 bg-blue-600 text-white rounded-full font-semibold shadow hover:bg-blue-700">Start Learning</a>
+      <a href="#" class="cta-button px-6 py-3 bg-teal-500 text-white rounded-full font-semibold shadow hover:bg-teal-600">Join Telegram</a>
+      <a href="#" class="cta-button px-6 py-3 bg-indigo-500 text-white rounded-full font-semibold shadow hover:bg-indigo-600">Take a Free Mock Test</a>
+    </div>
+  </section>
 
-  <div id="202541" class="section">This is Section 1st April 2025</div>
-  <div id="2025413" class="section">This is Section 1</div>
-  <div id="2025414" class="section">This is Section 1</div>
-  <div id="2025415" class="section">
-      <ol>
-<div class="container">
-<h1><li><u>Legends of endoscopy award</u></li></h1>
-<h2>Awarded to Dr D Nageshwar Reddy, chairman of AIG hospital </h2>
-<ul>
-  <li>Legends of endoscopy award is a prestigious recognization given by a community of Japanese gastroenterologists to honor the work of a person in the field of gastro enterology. </li>
-  <li>Dr D Nageshwar Reddy is the first Indian doctor to receive this award. </li>
-  <li>He is being awarded for the work done by him in development and refining of endoscopic techniques. </li>
-</ul>
-</div>
+  <!-- Highlight Sections -->
+  <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6 py-10 max-w-6xl mx-auto">
+    <div class="bg-white shadow rounded-2xl p-6 hover:shadow-lg transition duration-300 border-t-4 border-blue-500">
+      <h3 class="text-xl font-semibold text-gray-800 mb-2">Daily Current Affairs</h3>
+      <p class="text-gray-600">Stay updated with latest news and exam-relevant current events.</p>
+    </div>
+    <div class="bg-white shadow rounded-2xl p-6 hover:shadow-lg transition duration-300 border-t-4 border-teal-500">
+      <h3 class="text-xl font-semibold text-gray-800 mb-2">Mock Tests</h3>
+      <p class="text-gray-600">Attempt full-length and subject-wise tests with analysis.</p>
+    </div>
+    <div class="bg-white shadow rounded-2xl p-6 hover:shadow-lg transition duration-300 border-t-4 border-indigo-500">
+      <h3 class="text-xl font-semibold text-gray-800 mb-2">Study Materials</h3>
+      <p class="text-gray-600">Get topic-wise notes and downloadable PDFs curated by experts.</p>
+    </div>
+    <div class="bg-white shadow rounded-2xl p-6 hover:shadow-lg transition duration-300 border-t-4 border-pink-500">
+      <h3 class="text-xl font-semibold text-gray-800 mb-2">Quiz by Topics</h3>
+      <p class="text-gray-600">Practice with MCQs from all topics – Quant, Reasoning, GS & more.</p>
+    </div>
+    <div class="bg-white shadow rounded-2xl p-6 hover:shadow-lg transition duration-300 border-t-4 border-yellow-500">
+      <h3 class="text-xl font-semibold text-gray-800 mb-2">Latest Job Notifications</h3>
+      <p class="text-gray-600">Never miss an update. Get alerts for upcoming exams and jobs.</p>
+    </div>
+  </section>
 
-<div class="container">
-<h1><li><u>Golconda blue diamond</u></li></h1>
-<ul>
-  <li>the real Golconda blue diamond is set to be auctioned.</li>
-  <li>It is a Royal Heritage and distinct blue colour with a size of 23.24 carats.</li>
-  <li>The diamond is said to be auctioned by christy's organisation in Geneva, Switzerland on 14th may 2025. </li>
-  <li>The estimation price of the diamond is between Rs.300 cr to 430 cr.</li>
-  <li>According to the history it is originally belong to the king of indoor Maharaja Yashwantrao Holkar II.</li>
-</ul>
-</div>
-
-<div class="container">
-<h1><li><u>National archery committee</u></li></h1>
-<ul>
-  <li>The national archery committee is primarily established to identify talented archers from remote areas and train them to international archery competitions.</li>
-  <li>National archery development committee is consists of one chairman and oneconvener and other members.</li>
-  <li>Recently cherukuri Satyanarayana has been appointed as the chairman of national archery development committee</li>
-</ul>
-</div>
-
-<div class="container">
-<h1><li><u>Indian council of agriculture research (ICAR)</u></li></h1>
-<ul>
-  <li>Indian council of agriculture research approved 5 new hybrid maize varieties</li>
-</ul>
-<ul>
-  <li>New maize varieties are developed by the scientists from Acharya Jai Shankar Telangana state agriculture University in Coimbatore, Tamil Nadu</li>
-</ul>
-<ul>
-  <li>Among the five varieties BHM – 144 is rich in stark and sown in dryland areas also the rest of the varieties are high yielding varieties which resists of droughts</li>
-</ul>
-</div>
-
-<div class="container">
-<h1><li><u>Laser weapon system</u></li></h1>
-<ul>
-  <li>Defence research and development organisation's (DRDO) and centre for high energy systems and sciences (CHESS), Hyderabad has developed the laser weapon system</li>
-  <li>The defence research and development organisation has successfully completed testing of a remarkable laser system at National open air range in Kurnool on 13th April 2025</li>
-  <li>The system instantly neutralizing enemy missiles drones and small weapons by flashing a 30 kilowatt lighting speed laser on to the enemy  targets once the target is fixed</li>
-  <li>This happen has been named as " Mark-II(A) DEW( Laser- Direct Energy Weapon)</li>
-  <li>So far the dew technology have been successfully tested by the United States, China, Russia and now India</li>
-</ul>
-</div>
-
-<div class="container">
-<h1><li><u>Small modular reactor (SMR)</u></li></h1>
-<ul>
-  <li>first time in the nuclear fuel sector m o u has been signed between Russia's "Rosatom" company and State Government of Maharashtra to develop a small modular reactor</li>
-  <li>This is the first time a state government to sign and MOU in nuclear fuel sector</li>
-  <li>The small modular reactor operates on thorium fuel</li>
-  <li>SMR operated in accordance with the guidelines of the centre and the atomic energy regulatory body (AERB)</li>
-  <li>Our finance minister Sri Nirmala sitaraman announce and amount of rupees 20000 crores for research and development of small modular reactors</li>
-</ul>
-</div>
-
-<div class="container">
-<h1><li><u>Dr BR Ambedkar sanctuary</u></li></h1>
-<ul>
-  <li>the state government of Madhya Pradesh has declared a new wildlife sanctuary over an area of 258.64 square kilometres in the Sagar district</li>
-  <li>The sanctuary has been named as Dr BR Ambedkar sanctuary on the 134th birth anniversary of Dr BR Ambedkar</li>
-  <li>Total wildlife sanctuaries in Madhya Pradesh has been increased to 25 including the new one</li>
-  <li>The state of Madhya Pradesh has also been recognised as the Tiger state of India</li>
-</ul>
-</div>
-
-<div class="container">
-<h1><li><u>Ratan Tata innovation hub</u></li></h1>
-<ul>
-  <li>the state government of Andhra Pradesh decided to established 6 Ratan Tata innovation hubs in amaravathi, Visakhapatnam, rajamahendravaram, NTR district, Tirupati and Anantapur district, among them Amravati hub is the main centre and the rest or regional hub</li>
-  <li>Government funds some grands and grand from AP innovation society as seed capital to established these hub according to the guidelines</li>
-</ul>
-</div>
-
-<div class="container">
-<h1><li><u>Implementation of SC classification in Telangana</u></li></h1>
-<ul>
-  <li>State Government of Telangana issued orders for implementation of FA classification effect from 21st April 2025</li>
-  <li>Classification act 2025 world published in Telangana gadget on 14th of April 2025 after passing the bill on 8 April 2025 by the legislature</li>
-  <li>The orders issued by the principal secretary to the SC social welfare department as "the total of 15% of SCreservations " categorised as follow:</li>
-</ul><ul>
-<p><h3><li>sub caste in group 1 - 1%</li></h3></p>
-<p><h3><li>sub caste in group 2 - 9%</li></h3></p>
-<p><h3><li>sub caste in group 3 - 5%</li></h3></p></ul>
-<p><h3><br></h3></p>
-<ul>
-  <li>Exemption for the above order in case of job notifications issued earlier 14th April 2025</li>
-  <li>Exemptions to the central government or public sector units are Central Government educational institutions</li>
-</ul>
-</div>
-
-<div class="container">
-<h1><li><u>Meningitis</u></li></h1>
-<ul>
-  <li>it is the information of the tissues surrounded the brain and spinal cord</li>
-  <li>Infection caused by bacteria, virus, fungi and other parasites</li>
-  <li>The transmission route where is by organisms</li>
-  <li>There carried in human nose and throat</li>
-  <li>World health organisation launches first ever guidelines on meningitis diagnose, treatment and cure</li>
-  <li>Prevention: vaccines against common types of bacterial meningitis antibiotics etc.</li>
-</ul>
-</div>
-
-<div class="container">
-<h1><li><u>World's busiest airports 2024</u></li></h1>
-<p><h3>The airport council international (ACI) release the list of the world's busiest airports for the year 2024 based on the passengers traffic data</h3></p>
-
-    <table border="2" width="60%" align="center" text-align="center">
-    <tr>
-        <th>Airport Name</th>
-        <th>Rank</th>
-        <th>No of passengers</th>
-    </tr>
-    <tr>
-        <td>Atlanta(USA)</th>
-        <td>1</th>
-        <td>More than 108 million</td>
-    </tr><tr>
-        <td>Dubai(UAE)</th>
-        <td>2</th>
-        <td>More than 92 million</td>
-    </tr><tr>
-        <td>Dallas(USA)</th>
-        <td>3</th>
-        <td>More than 87 million</td>
-    </tr><tr>
-        <td>Tokyo(Japan)</th>
-        <td>4</th>
-        <td>More than 85 million</td>
-    </tr><tr>
-        <td>London(UK)</th>
-        <td>5</th>
-        <td>More than 83 million</td>
-    </tr>
-    <tr>
-        <td>Indira Gandhi(India)</th>
-        <td>9</th>
-        <td>More than 77 million</td>
-    </tr>
-</table>
-</div>
-
-<div class="container">
-<h1><li><u>World Art Day</u></li></h1>
-<ul>
-  <li>15th April is celebrated as world art day each year in memory of Italian artist Leonardo da Vinci birthday, who was born on the day in 1452.</li>
-  <li>The first World Art Day was celebrated in 2012 April 15.</li>
-  <li>The theme for 2025 world art day is: The International Association of Arts theme for World Art Day 2025 "DNA- Do No Algorithm," will celebrate the irreplaceable essence of human creativity, presenting works crafted by human artists as a counterpoint to the rise of AI-generated creations</li>
-</ul>
-</div>
-
-      </ol>
-      </div>
-  <div id="2025416" class="section">This is Section 3</div>
- 
-<div id="2025420" class="section">
-<h1>head one</h1>
-<h2>sub one</h2>
-<p><h3>de one</h3></p>
-</div> 
-
-
-
-
-<script>
-    // Disable right-click (context menu)
-    document.addEventListener('contextmenu', function (e) {
-        e.preventDefault();
-        alert("Right-click is disabled on this page.");
-    });
-
-    // Disable text selection
-    document.addEventListener('selectstart', function (e) {
-        e.preventDefault();
-    });
-
-    // Disable keyboard shortcuts like Ctrl+C, Ctrl+U, Ctrl+Shift+I
-    document.addEventListener('keydown', function (e) {
-        if (e.ctrlKey && (e.key === 'c' || e.key === 'u' || e.key === 'i')) {
-            e.preventDefault();
-            alert("Copying, viewing source, and developer tools are disabled.");
-        }
-    });
-
-    // Prevent images and other media from being saved via right-click
-    document.querySelectorAll('img').forEach(function(img) {
-        img.oncontextmenu = function() {
-            return false; // Prevent right-click on images
-        };
-    });
-
-</script>
+  <!-- Floating Scrolling Ticker for Current Affairs -->
+  <div class="ticker fixed bottom-0 left-0 w-full py-2 z-100">
+    <div class="ticker-text text-blue-800 font-semibold text-sm">
+      🔔 6th Aug 2025: RBI Grade B Mains Exam Scheduled | UPSC Prelims 2025 Results Declared | SSC CGL 2025 Tier I Admit Card Out | India signs MoU with France on Solar Mission | National Space Policy 2025 Announced
+    </div>
+  </div>
 
 </body>
 </html>
